@@ -1,0 +1,6 @@
+cran_mirror:
+- https://cran.r-project.org
+r_base:
+- 3.4.1
+target_platform:
+- linux-64
