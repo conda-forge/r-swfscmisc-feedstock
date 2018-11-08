@@ -1,28 +1,27 @@
 {% set version = '1.2' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
-{% set cran_mirror = 'https://cran.r-project.org' %}
 
 package:
   name: r-swfscmisc
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: swfscMisc_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/swfscMisc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/swfscMisc/swfscMisc_{{ version }}.tar.gz
   sha256: 8018ef8855811c73f7ff8119a2c6a552979eb06fb092a0f3c5267ed47566e222
 
 build:
-  number: 0
-  skip: true  # [win]
+  merge_build_host: True  # [win]
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
   host:
     - r-base
     - r-ggplot2
@@ -61,3 +60,4 @@ extra:
     - daler
     - jdblischak
     - cbrueffer
+    - dbast
