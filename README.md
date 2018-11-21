@@ -14,9 +14,8 @@ Summary: Collection of conversion, analytical, geodesic, mapping, and plotting f
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-swfscmisc-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-swfscmisc-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-swfscmisc-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-swfscmisc-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-swfscmisc-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-swfscmisc-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-swfscmisc-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-swfscmisc-feedstock)
 
 Current release info
 ====================
