@@ -1,4 +1,4 @@
-{% set version = '1.3' %}
+{% set version = "1.4.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/swfscMisc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/swfscMisc/swfscMisc_{{ version }}.tar.gz
-  sha256: 3ab4a4b4a2af18fe5b937a91eb6e64dda7f237939bc8ca9d2fc5bdcb62969f0f
+  sha256: 7139e365b593d88c18a9137859033461597c5b0627e6298d97a0d589ea8995fb
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -24,29 +24,31 @@ requirements:
   build:
     - {{ posix }}zip               # [win]
   host:
-    - r-base
+    - r-base >=4.0.0
     - r-dplyr
     - r-ggplot2
     - r-ggrepel
+    - r-kknn
     - r-magrittr
     - r-mapdata
     - r-maps
-    - r-reshape2
     - r-rlang
-    - r-spatstat
+    - r-sf
+    - r-spatstat.geom
     - r-tibble
     - r-tidyr
   run:
-    - r-base
+    - r-base >=4.0.0
     - r-dplyr
     - r-ggplot2
     - r-ggrepel
+    - r-kknn
     - r-magrittr
     - r-mapdata
     - r-maps
-    - r-reshape2
     - r-rlang
-    - r-spatstat
+    - r-sf
+    - r-spatstat.geom
     - r-tibble
     - r-tidyr
 
@@ -57,13 +59,11 @@ test:
 
 about:
   home: https://github.com/EricArcher/swfscMisc
-  license: GPL-2
-  summary: Collection of conversion, analytical, geodesic, mapping, and plotting functions. Used
-    to support packages and code written by researchers at the Southwest Fisheries Science
-    Center of the National Oceanic and Atmospheric Administration.
+  license: GPL-2.0-or-later
+  summary: Collection of conversion, analytical, geodesic, mapping, and plotting functions. Used to support packages and code written by researchers at the Southwest Fisheries Science Center of the National Oceanic and Atmospheric Administration.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
