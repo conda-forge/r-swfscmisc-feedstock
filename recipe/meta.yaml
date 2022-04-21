@@ -1,4 +1,4 @@
-{% set version = "1.5" %}
+{% set version = "1.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/swfscMisc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/swfscMisc/swfscMisc_{{ version }}.tar.gz
-  sha256: a5e135f80ab338a178680ec2cb0751c8b2f2e9f041275407db94a1955c17e6c8
+  sha256: f3e58b796a1a5471f30f248233ad62248d3e4c4fcf8b3f5c855254dc882559db
 
 build:
   merge_build_host: true  # [win]
@@ -23,8 +23,10 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
-    - r-base >=4.0.0
+    - r-base
+    - r-hdinterval
     - r-dplyr
     - r-ggplot2
     - r-ggrepel
@@ -38,7 +40,8 @@ requirements:
     - r-tibble
     - r-tidyr
   run:
-    - r-base >=4.0.0
+    - r-base
+    - r-hdinterval
     - r-dplyr
     - r-ggplot2
     - r-ggrepel
