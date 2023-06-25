@@ -1,11 +1,11 @@
-About r-swfscmisc
-=================
+About r-swfscmisc-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-swfscmisc-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/EricArcher/swfscMisc
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-swfscmisc-feedstock/blob/main/LICENSE.txt)
 
 Summary: Collection of conversion, analytical, geodesic, mapping, and plotting functions. Used to support packages and code written by researchers at the Southwest Fisheries Science Center of the National Oceanic and Atmospheric Administration.
 
