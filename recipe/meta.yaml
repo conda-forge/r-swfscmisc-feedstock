@@ -1,4 +1,4 @@
-{% set version = "1.6" %}
+{% set version = "1.6.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/swfscMisc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/swfscMisc/swfscMisc_{{ version }}.tar.gz
-  sha256: f3e58b796a1a5471f30f248233ad62248d3e4c4fcf8b3f5c855254dc882559db
+  sha256: a49cb390643c4079f02986862eb2dfd33db4e6b6498e849bb418f73ffd6882e1
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
