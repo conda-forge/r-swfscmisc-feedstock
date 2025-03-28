@@ -25,13 +25,12 @@ requirements:
   host:
     - r-base
     - r-hdinterval
+    - r-abind
     - r-dplyr
     - r-ggplot2
     - r-ggrepel
     - r-kknn
-    - r-magrittr
-    - r-mapdata
-    - r-maps
+    - r-modeest
     - r-rlang
     - r-sf
     - r-spatstat.geom
@@ -40,13 +39,12 @@ requirements:
   run:
     - r-base
     - r-hdinterval
+    - r-abind
     - r-dplyr
     - r-ggplot2
     - r-ggrepel
     - r-kknn
-    - r-magrittr
-    - r-mapdata
-    - r-maps
+    - r-modeest
     - r-rlang
     - r-sf
     - r-spatstat.geom
