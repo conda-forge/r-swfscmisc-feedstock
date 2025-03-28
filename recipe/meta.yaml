@@ -1,4 +1,4 @@
-{% set version = "1.6" %}
+{% set version = "1.6.6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/swfscMisc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/swfscMisc/swfscMisc_{{ version }}.tar.gz
-  sha256: f3e58b796a1a5471f30f248233ad62248d3e4c4fcf8b3f5c855254dc882559db
+  sha256: a8ff77c6ebd78d813acb226e4ae3d31c711aa4688d38a60fd822f8cd6de381b9
 
 build:
-  number: 3
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -25,13 +25,12 @@ requirements:
   host:
     - r-base
     - r-hdinterval
+    - r-abind
     - r-dplyr
     - r-ggplot2
     - r-ggrepel
     - r-kknn
-    - r-magrittr
-    - r-mapdata
-    - r-maps
+    - r-modeest
     - r-rlang
     - r-sf
     - r-spatstat.geom
@@ -40,13 +39,12 @@ requirements:
   run:
     - r-base
     - r-hdinterval
+    - r-abind
     - r-dplyr
     - r-ggplot2
     - r-ggrepel
     - r-kknn
-    - r-magrittr
-    - r-mapdata
-    - r-maps
+    - r-modeest
     - r-rlang
     - r-sf
     - r-spatstat.geom
