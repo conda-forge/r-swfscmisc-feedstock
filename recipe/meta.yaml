@@ -1,4 +1,4 @@
-{% set version = "1.7" %}
+{% set version = "1.7.6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/swfscMisc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/swfscMisc/swfscMisc_{{ version }}.tar.gz
-  sha256: d64769df8c4390ff86c5c3b3c3f42fb8a5b7f34b64f89bab6d7364d28a5ff79e
+  sha256: 85fb1745ea7ef2e6b1b381d610df0775c6818adaee83b59fe9238c860f491ad8
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
